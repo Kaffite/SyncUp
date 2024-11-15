@@ -1,19 +1,31 @@
-h1 {
+.pealeht .pealkiri h1{
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: auto;
     color:rgb(102,90,44);
     font-family: verdana;
     font-size: 28px;
-    text-align: center;
-    }
-<! -- 
+}
+
+
+/* siin olid html komenteerimis märgistus, ei saanud aru, mis sa teha tahtsid siin, aga lisasin css komenteerimis märgistuse. -Evar
 a {
     border: solid;
     border-color: yellowgreen;
--->
 }
+*/
+
 img{
     width: 150px;
     height: 150px;
 }
-body{
-    background-image: url("https://img.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?t=st=1731680953~exp=1731684553~hmac=35993a430018833b865113098107cf27c0c78ba708ab05d59c5f4a8bd06e7d1b&w=1480");
+
+body {
+    content: "";
+    background-image: url(tagataust.PNG);
+    background-repeat: repeat;
+    background-size: 7%;
+    position: absolute;
 }
