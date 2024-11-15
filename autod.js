@@ -32,16 +32,18 @@ document.addEventListener("DOMContentLoaded", function() {
       // Get the post data
       const postTitle = document.getElementById("postTitle").value;
       const postContent = document.getElementById("postContent").value;
+      const contactAddress = document.getElementById("contactAddress").value;
 
-      // Create a new post object
+      // Create a new post object with contact address
       const newPost = {
           title: postTitle,
-          content: postContent
+          content: postContent,
+          contactAddress: contactAddress // Store contact address
       };
 
-      // Add the new post to the array and display it
+      // Add the new post to the array and save it to localStorage
       posts.push(newPost);
-      localStorage.setItem("posts", JSON.stringify(posts)); // Save to localStorage
+      localStorage.setItem("posts", JSON.stringify(posts));
       displayPosts();
 
       // Reset the form
@@ -54,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function displayPosts() {
       postsList.innerHTML = "";  // Clear previous posts
 
-      posts.forEach(function(post, index) {
+      posts.forEach(function(post) {
           const postElement = document.createElement("div");
           postElement.classList.add("post");
 
@@ -64,8 +66,12 @@ document.addEventListener("DOMContentLoaded", function() {
           const postContent = document.createElement("p");
           postContent.textContent = post.content;
 
+          const postContact = document.createElement("p");
+          postContact.textContent = `Contact: ${post.contactAddress}`;
+
           postElement.appendChild(postTitle);
           postElement.appendChild(postContent);
+          postElement.appendChild(postContact);
 
           postsList.appendChild(postElement);
       });
