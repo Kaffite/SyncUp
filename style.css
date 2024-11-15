@@ -1,14 +1,19 @@
 h1 {
-    color:rgb(231, 247, 13);
+    color:rgb(102,90,44);
     font-family: verdana;
     font-size: 28px;
     text-align: center;
     }
+<! -- 
 a {
     border: solid;
     border-color: yellowgreen;
+-->
 }
 img{
     width: 150px;
     height: 150px;
+}
+body{
+    background-image: url("https://img.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?t=st=1731680953~exp=1731684553~hmac=35993a430018833b865113098107cf27c0c78ba708ab05d59c5f4a8bd06e7d1b&w=1480");
 }
