@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#postFormContainer {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+#postsContainer {
+    margin-top: 20px;
+}
+
+#postsList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.post {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+}
+
+.post h3 {
+    margin: 0 0 10px;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
