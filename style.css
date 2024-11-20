@@ -1,31 +1,60 @@
-.pealeht .pealkiri h1{
-    text-align: center;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    color:rgb(102,90,44);
-    font-family: verdana;
-    font-size: 28px;
-}
-
-
-/* siin olid html komenteerimis märgistus, ei saanud aru, mis sa teha tahtsid siin, aga lisasin css komenteerimis märgistuse. -Evar
-a {
-    border: solid;
-    border-color: yellowgreen;
-}
-*/
-
-img{
-    width: 150px;
-    height: 150px;
-}
-
 body {
-    content: "";
+    margin: 0;
+    padding: 0;
     background-image: url(tagataust.PNG);
     background-repeat: repeat;
     background-size: 7%;
-    position: absolute;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+}
+
+.pealeht {
+    text-align: center;
+    width: 80%; 
+    max-width: 800px; 
+}
+
+.pealkiri {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px; 
+}
+
+.logo {
+    width: 50px; 
+    height: 50px;
+}
+
+.nimi {
+    margin: 0;
+    font-family: verdana;
+    font-size: 48px;
+    color: rgb(102, 90, 44);
+}
+
+.sisu {
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+a {
+    border: solid;
+    border-color: #E3C08D;
+    text-decoration: none; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    color: rgb(102, 90, 44);
+}
+
+a:hover {
+    background-color: #E3C08D;
+    color: white;
+}
+
+.sisu, img {
+    margin-top: 10px;
 }
