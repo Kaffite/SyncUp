@@ -16,6 +16,12 @@ body {
     max-width: 800px; 
 }
 
+.foorum {
+    text-align: center;
+    width: 80%; 
+    max-width: 800px; 
+}
+
 .pealkiri {
     display: flex; 
     align-items: center; 
