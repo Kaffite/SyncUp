@@ -1,79 +1,92 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const newPostButton = document.getElementById("newPostButton");
-  const postFormContainer = document.getElementById("postFormContainer");
-  const postForm = document.getElementById("postForm");
-  const postsList = document.getElementById("postsList");
-  const cancelPostButton = document.getElementById("cancelPostButton");
+document.addEventListener("DOMContentLoaded", function () {
+    const newPostButton = document.getElementById("newPostButton");
+    const postFormContainer = document.getElementById("postFormContainer");
+    const postForm = document.getElementById("postForm");
+    const postsList = document.getElementById("postsList");
+    const cancelPostButton = document.getElementById("cancelPostButton");
 
-  let posts = [];
+    const API_URL = "http://localhost:3000/posts"; // Backend serveri aadress
 
-  // Load posts from localStorage if available
-  if (localStorage.getItem("posts")) {
-      posts = JSON.parse(localStorage.getItem("posts"));
-      displayPosts();
-  }
+    // Lae postitused serverist
+    function loadPosts() {
+        fetch(API_URL)
+            .then((response) => response.json())
+            .then((data) => {
+                displayPosts(data);
+            })
+            .catch((error) => console.error("Error fetching posts:", error));
+    }
 
-  // Show the post creation form
-  newPostButton.addEventListener("click", function() {
-      postFormContainer.style.display = "block";
-      newPostButton.style.display = "none";  // Hide the create button when form is visible
-  });
+    // Näita postituste vormi
+    newPostButton.addEventListener("click", function () {
+        postFormContainer.style.display = "block";
+        newPostButton.style.display = "none";
+    });
 
-  // Cancel creating post
-  cancelPostButton.addEventListener("click", function() {
-      postFormContainer.style.display = "none";
-      newPostButton.style.display = "inline-block";  // Show the create button again
-  });
+    // Tühista postituse loomine
+    cancelPostButton.addEventListener("click", function () {
+        postFormContainer.style.display = "none";
+        newPostButton.style.display = "inline-block";
+    });
 
-  // Handle form submission
-  postForm.addEventListener("submit", function(e) {
-      e.preventDefault();
+    // Postituse lisamine
+    postForm.addEventListener("submit", function (e) {
+        e.preventDefault(); // Vältida vormi automaatset saatmist
+        console.log('Form submitted');  // Kontrollige, kas see jõuab siia
 
-      // Get the post data
-      const postTitle = document.getElementById("postTitle").value;
-      const postContent = document.getElementById("postContent").value;
-      const contactAddress = document.getElementById("contactAddress").value;
+        const newPost = {
+            title: document.getElementById("postTitle").value,
+            content: document.getElementById("postContent").value,
+            contactAddress: document.getElementById("contactAddress").value,
+        };
 
-      // Create a new post object with contact address
-      const newPost = {
-          title: postTitle,
-          content: postContent,
-          contactAddress: contactAddress // Store contact address
-      };
+        if (!newPost.title || !newPost.content || !newPost.contactAddress) {
+            alert("Palun täitke kõik väljad!");
+            return;
+        }
 
-      // Add the new post to the array and save it to localStorage
-      posts.push(newPost);
-      localStorage.setItem("posts", JSON.stringify(posts));
-      displayPosts();
+        // Saada uus post serverisse
+        fetch(API_URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newPost),
+        })
+            .then((response) => response.json())
+            .then(() => {
+                loadPosts(); // Lae uuesti postitused
+                postForm.reset(); // Tühjenda vorm
+                postFormContainer.style.display = "none";
+                newPostButton.style.display = "inline-block";
+            })
+            .catch((error) => console.error("Error adding post:", error));
+    });
 
-      // Reset the form
-      postForm.reset();
-      postFormContainer.style.display = "none";
-      newPostButton.style.display = "inline-block";
-  });
+    // Kuvamise funktsioon
+    function displayPosts(posts) {
+        postsList.innerHTML = ""; // Puhasta eelmine sisu
+        posts.forEach((post) => {
+            const postElement = document.createElement("div");
+            postElement.classList.add("post");
 
-  // Function to display posts
-  function displayPosts() {
-      postsList.innerHTML = "";  // Clear previous posts
+            const postTitle = document.createElement("h3");
+            postTitle.textContent = post.title;
 
-      posts.forEach(function(post) {
-          const postElement = document.createElement("div");
-          postElement.classList.add("post");
+            const postContent = document.createElement("p");
+            postContent.textContent = post.content;
 
-          const postTitle = document.createElement("h3");
-          postTitle.textContent = post.title;
+            const postContact = document.createElement("p");
+            postContact.textContent = `Contact: ${post.contactAddress}`;
 
-          const postContent = document.createElement("p");
-          postContent.textContent = post.content;
+            postElement.appendChild(postTitle);
+            postElement.appendChild(postContent);
+            postElement.appendChild(postContact);
 
-          const postContact = document.createElement("p");
-          postContact.textContent = `Contact: ${post.contactAddress}`;
+            postsList.appendChild(postElement);
+        });
+    }
 
-          postElement.appendChild(postTitle);
-          postElement.appendChild(postContent);
-          postElement.appendChild(postContact);
-
-          postsList.appendChild(postElement);
-      });
-  }
+    // Lae postitused, kui leht on laaditud
+    loadPosts();
 });

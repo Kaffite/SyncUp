@@ -1,20 +1,31 @@
-const express = require('express');
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+
 const app = express();
-const posts = [];
+const port = 3000;
 
-app.use(express.json());
+// Enable CORS
+app.use(cors());
 
-app.post('/posts', (req, res) => {
-  const { name, content } = req.body;
-  const newPost = { id: posts.length + 1, name, content };
-  posts.push(newPost);
-  res.status(201).json(newPost);
+// Parse JSON bodies
+app.use(bodyParser.json());
+
+// Fake in-memory database
+let posts = [];
+
+// Get all posts
+app.get("/posts", (req, res) => {
+    res.json(posts);
 });
 
-app.get('/posts', (req, res) => {
-  res.json(posts);
+// Add a new post
+app.post("/posts", (req, res) => {
+    const newPost = req.body;
+    posts.push(newPost);
+    res.status(201).json(newPost);
 });
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
 });
