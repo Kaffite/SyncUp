@@ -9,32 +9,13 @@
 <body>
     <header>
         <h1>Autohuviliste foorum</h1>
-        <p>See foorum on autohuvilistele. Oodatud on kõik, mis on autodega seotud.</p>
-        <button id="newPostButton">Create New Post</button>
+         <textarea id="postContent" placeholder="Write your post here..."></textarea>
+        <button onclick="postMessage()">Post</button>
     </header>
 
-    <div id="postFormContainer" style="display:none;">
-        <h2>Create a New Post</h2>
-        <form id="postForm">
-            <label for="postTitle">Title:</label>
-            <input type="text" id="postTitle" name="title" required><br><br>
-        
-            <label for="postContent">Content:</label><br>
-            <textarea id="postContent" name="content" rows="5" required></textarea><br><br>
-        
-            <label for="contactAddress">Contact Address:</label>
-            <input type="text" id="contactAddress" name="contactAddress" required><br><br>
-        
-            <button type="submit">Submit Post</button>  <!-- Kontrollige, et see nupp on olemas -->
-            <button type="button" id="cancelPostButton">Cancel</button>
-        </form>
-        
-    </div>
 
-    <div id="postsContainer">
-        <h2>Posts</h2>
-        <div id="postsList"></div>
-    </div>
+    <div id="postsContainer"></div>
+    
     <p><a href="foorum.html">Tagasi Foorumisse</a></p>
 
     <script src="autod.js"></script>
