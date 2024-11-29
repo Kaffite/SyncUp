@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autohuviliste Foorum</title>
-    <link rel="stylesheet" href="autod.css">
+    <meta charset="utf-8">
+    <title>Autohuviliste foorum</title>
+    <link rel="stylesheet" type="text/css" href= "autod.css">
 </head>
 <body>
-    <header>
-        <h1>Autohuviliste foorum</h1>
-         <textarea id="postContent" placeholder="Kirjuta oma sõnum..."></textarea>
-        <button onclick="postMessage()">Post</button>
-    </header>
-
-
-    <div id="postsContainer"></div>
-    
-    <p><a href="foorum.html">Tagasi Foorumisse</a></p>
-
-    <script src="autod.js"></script>
+    <div class="autod">
+        <div class="pealkiri">
+            <img src="logo.png" alt="Logo" class="logo" width="50px" height="50px">
+            <h1>Autohuviliste Foorum</h1>
+        </div>
+        <div class="alampealkiri">
+            <p>See foorum on autohuvilistele. Oodatud on kõik mis on autodega seotud. </p>
+        </div>
+        <div class="postitamine">
+            <textarea id="postContent" placeholder="Kirjuta oma sõnum..."></textarea>
+            <button onclick="postMessage()">Post</button>
+        </div>
+        <p><a href="foorum.html">Tagasi Foorumisse</a></p>
+    </div>
 </body>
 </html>
