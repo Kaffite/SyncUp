@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url(Muud_hobid_tagataust.png);
+    background-image: url(teisedhobid_tagataust.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -59,7 +59,7 @@ a{
 }
 
 a:hover {
-    background-image: url(Muud_nupu_background.png);
+    background-image: url(teisedhobid_nupp.png);
     background-size: 200%;
     color: white;
 }

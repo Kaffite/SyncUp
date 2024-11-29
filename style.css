@@ -120,19 +120,19 @@ a:hover {
 }
 
 .menu a:nth-child(1):hover {
-    background-image: url(gears.png);
+    background-image: url(autod_nupp.png);
     background-size: cover;
     color: white;
 }
 
 .menu a:nth-child(2):hover {
-    background-image: url(handegg.jpg);
+    background-image: url(sport_nupp.jpg);
     background-size: cover;
     color: rgb(0, 0, 0);
 }
 
 .menu a:nth-child(3):hover {
-    background-image: url(Muud_nupu_background.png);
+    background-image: url(teisedhobid_nupp.png);
     background-position: center;
     color: black;
 }

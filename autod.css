@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url(Autod_Background.png);
+    background-image: url(autod_tagataust.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -58,7 +58,7 @@ a{
 }
 
 a:hover {
-    background-image: url(gears.png);
+    background-image: url(autod_nupp.png);
     background-size: cover;
     color: white;
 }
