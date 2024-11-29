@@ -5,6 +5,6 @@ function postMessage() {
         post.className = 'post';
         post.textContent = postContent;
         document.getElementById('postsContainer').prepend(post);
-        document.getElementById('postContent').value = ''; // Clear the textarea
+        document.getElementById('postContent').value = '';
     }
 }

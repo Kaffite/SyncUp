@@ -25,7 +25,8 @@ body {
 
 .logo {
     border-radius: 15%;
-    border: 2px solid antiquewhite;
+    border: 2px rgb(117, 179, 170, 0.5);
+    background-color: rgb(117, 179, 170, 0.5);
     width: 50px; 
     height: 50px;
 }
@@ -59,6 +60,6 @@ a{
 
 a:hover {
     background-image: url(handegg.jpg);
-    background-size: cover;
+    background-size: 110%;
     color: rgb(0, 0, 0);
 }

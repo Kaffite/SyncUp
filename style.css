@@ -64,3 +64,75 @@ a:hover {
 .sisu, img {
     margin-top: 10px;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.konteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.nupu-menu {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(102, 90, 44);
+    border: solid;
+    border-radius: 5px;
+    border-color: #E3C08D;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.nupu-menu:hover {
+    background-color: #E3C08D;
+    color: white;
+}
+
+.menu {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.peidus {
+    display: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.menu a:nth-child(1):hover {
+    background-image: url(gears.png);
+    background-size: cover;
+    color: white;
+}
+
+.menu a:nth-child(2):hover {
+    background-image: url(handegg.jpg);
+    background-size: cover;
+    color: rgb(0, 0, 0);
+}
+
+.menu a:nth-child(3):hover {
+    background-image: url(Muud_nupu_background.png);
+    background-position: center;
+    color: black;
+}

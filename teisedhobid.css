@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url(Autod_Background.png);
-    background-size: cover;
+    background-image: url(Muud_hobid_tagataust.png);
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -20,6 +20,7 @@ body {
     margin-right: 0px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: large;
+    color: antiquewhite;
 }
 
 .logo {
@@ -30,13 +31,12 @@ body {
     height: 50px;
 }
 
-
 .alampealkiri {
-    margin-top: -20px;
+    margin-top: 20px;
     align-content: center;
     font-size: 15px;
-    color: azure;
-    margin-top: -40px;
+    color: rgb(218, 162, 21);
+    margin-top: -30px;
     margin-bottom: 200px;
     margin-left: 20px;
 }
@@ -50,15 +50,16 @@ a{
     margin-left: 160px;
     margin-top: -60px;
     border: solid;
-    border-color: gray;
+    border-color: rgba(68, 175, 84, 0.619);
     text-decoration: none; 
     padding: 5px 10px; 
     border-radius: 5px; 
-    color: rgb(0, 0, 0);
+    color: black;
+    text-shadow: 2px 2px 5px rgba(red, green, blue);
 }
 
 a:hover {
-    background-image: url(gears.png);
-    background-size: cover;
+    background-image: url(Muud_nupu_background.png);
+    background-size: 200%;
     color: white;
 }
