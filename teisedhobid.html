@@ -14,11 +14,15 @@
         <div class="alampealkiri">
             <p>Selles foorumis saad leida igasuguseid hobisi. Oodatud on kõiksugused hobid. </p>
         </div>
-        <div class="postitamine">
-            <textarea id="postContent" placeholder="Kirjuta oma sõnum..."></textarea>
-            <button onclick="postMessage()">Post</button>    
+        <form id="add-post" class="post-form">
+            <input type="text" class="post-content" autocomplete="off" placeholder="Kirjuta oma postitus siia..." required>
+            <button type="submit">Postita</button>
+        </form>
+        <div id="post-list" class="post-list">
         </div>
         <p><a href="foorum.html">Tagasi Foorumisse</a></p>
     </div>
+    <script src="autod.js"></script>
 </body>
+
 </html>

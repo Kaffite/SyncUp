@@ -11,6 +11,25 @@ body {
     height: 100vh;
 }
 
+
+a{
+    margin-left: 160px;
+    margin-top: -60px;
+    border: solid;
+    border-color: rgba(68, 175, 84, 0.619);
+    text-decoration: none; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    color: black;
+    text-shadow: 2px 2px 5px rgba(red, green, blue);
+}
+
+a:hover {
+    background-image: url(teisedhobid_nupp.png);
+    background-size: 200%;
+    color: white;
+}
+
 .pealkiri {
     display: flex; 
     align-items: center; 
@@ -51,31 +70,15 @@ body {
     margin-top: 20px;
     align-content: center;
     font-size: 15px;
-    color: rgb(143, 102, 0);
+    color:wheat;
     margin-top: -30px;
     margin-bottom: 200px;
     margin-left: 20px;
 }
 
-.postitamine {
-    margin-left: 150px;
-    margin-top: 200px;
+.post-form {
+    text-align: center;
 }
-
-a{
-    margin-left: 160px;
-    margin-top: -60px;
-    border: solid;
-    border-color: rgba(68, 175, 84, 0.619);
-    text-decoration: none; 
-    padding: 5px 10px; 
-    border-radius: 5px; 
-    color: black;
-    text-shadow: 2px 2px 5px rgba(red, green, blue);
-}
-
-a:hover {
-    background-image: url(teisedhobid_nupp.png);
-    background-size: 200%;
-    color: white;
+.post {
+    background-color: wheat;
 }

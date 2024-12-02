@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Autohuviliste foorum</title>
-    <link rel="stylesheet" type="text/css" href= "autod.css">
+    <link rel="stylesheet" type="text/css" href="autod.css">
 </head>
 <body>
     <div class="autod">
@@ -12,13 +12,16 @@
             <h1>Autohuviliste Foorum</h1>
         </div>
         <div class="alampealkiri">
-            <p>See foorum on autohuvilistele. Oodatud on kõik mis on autodega seotud. </p>
+            <p>See foorum on autohuvilistele. Oodatud on kõik, mis on autodega seotud.</p>
         </div>
-        <div class="postitamine">
-            <textarea id="postContent" placeholder="Kirjuta oma sõnum..."></textarea>
-            <button onclick="postMessage()">Post</button>
+        <form id="add-post" class="post-form">
+            <input type="text" class="post-content" autocomplete="off" placeholder="Kirjuta oma postitus siia..." required>
+            <button type="submit">Postita</button>
+        </form>
+        <div id="post-list" class="post-list">
         </div>
         <p><a href="foorum.html">Tagasi Foorumisse</a></p>
     </div>
+    <script src="autod.js"></script>
 </body>
 </html>
