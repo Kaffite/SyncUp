@@ -25,11 +25,7 @@ p {
     margin-right: 0px;
     font-family: sans-serif;
     font-size: large;
-<<<<<<< HEAD
-    color: black;
-=======
     text-decoration: double;
->>>>>>> f8f33b9ec71a5dbeea6901f9c6415c3501313778
     position: relative;
     text-align: center;
     color: white;
@@ -82,14 +78,9 @@ a{
     text-decoration: none; 
     padding: 5px 10px; 
     border-radius: 5px; 
-<<<<<<< HEAD
-    color:wheat;
-    text-shadow: 2px 2px 5px rgba(red, green, blue);
-=======
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px;
     
->>>>>>> f8f33b9ec71a5dbeea6901f9c6415c3501313778
 }
 
 a:hover {

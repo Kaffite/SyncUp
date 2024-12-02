@@ -10,7 +10,6 @@ body {
     align-items: center; 
     height: 100vh;
 }
-<<<<<<< HEAD
 
 
 a{
@@ -22,7 +21,7 @@ a{
     padding: 5px 10px; 
     border-radius: 5px; 
     color: black;
-    text-shadow: 2px 2px 5px rgba(red, green, blue);
+    text-shadow: 2px 2px 5px;
 }
 
 a:hover {
@@ -31,14 +30,12 @@ a:hover {
     color: white;
 }
 
-=======
 p {
     font-size: x-large;
     font-family: sans-serif;
     color: white;
     font-weight: 530;
 }
->>>>>>> f8f33b9ec71a5dbeea6901f9c6415c3501313778
 .pealkiri {
     display: flex; 
     align-items: center; 
@@ -88,11 +85,9 @@ p {
 .post-form {
     text-align: center;
 }
-<<<<<<< HEAD
 .post {
     background-color: wheat;
-=======
-
+}
 a{
     margin-left: 160px;
     margin-top: -60px;
@@ -109,5 +104,4 @@ a:hover {
     background-image: url(teisedhobid_nupp.png);
     background-size: 200%;
     color: white;
->>>>>>> f8f33b9ec71a5dbeea6901f9c6415c3501313778
 }
